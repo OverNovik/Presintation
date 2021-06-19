@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					DESIGN PATTERNS IN TYPESCRIPT<br>
+					(Abstract Factory)
+				</section>
+				<section>
+					Abstract Factory
+					<section>The simplest and most accurate answer is that the Abstract Factory is a "factory of factories."</section>
+					<section><img src="./images/a1.PNG" alt="image"></section>
+					<section><img src="./images/a2.PNG" alt="image"></section>
+					<section>
+						<h2 style="color: yellow;">Solution</h2>
+						<img src="./images/a3.PNG" alt="image">
+					</section>
+					<section><img src="./images/a4.PNG" alt="image"></section>
+					<section><img src="./images/a5.PNG" alt="image"></section>
+					<section>Implementation example:</section>
+					<section>
+						Let's imagine we have several doors:
+						<img src="./images/e1.PNG" alt="image">
+					</section>
+					<section>
+						As well as narrow specialist installers:
+						<img src="./images/e2.PNG" alt="image">
+					</section>
+					<section><h6>You need to group everything. Wooden doors - with a carpenter, iron doors - with a welder</h6></section>
+					<section>
+						<p style="margin-top: 3rem">Wood factory returns carpenter and wood door:</p>
+						<img src="./images/e3-1.PNG" alt="image">
+						<p>The iron factory returns the welder and the iron door:</p>
+						<img src="./images/e3-2.PNG" alt="image">
+					</section>
+					<section>
+						<p style="margin-top: 3rem">And now you can do the doors too:</p>
+						<img src="./images/e4.PNG" alt="image">
+						<p>Now the required master is included with each door.
+
+						The pattern is useful when there are several classes that depend on each other.</p>
+					</section>
+					<section>
+						<h6 style="color: greenyellow;">advantages</h6>
+						<ul>
+							<li>specific classes</li>
+							<li>simplifies the replacement of product families</li>
+							<li>guarantees the compatibility of products</li>
+						</ul>
+						<h6 style="color: red">disadvantages</h6>
+						<ul>
+							<li>It complicates the program code due to the introduction of many additional classes.</li>
+							<li>Requires all types of food in every variation.</li>
+						</ul>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
